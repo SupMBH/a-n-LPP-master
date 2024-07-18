@@ -1,0 +1,54 @@
+Implémentation d'une fonctionnalité de filtrage et de recherche pour des recettes culinaires. 
+
+Recherche Principale : La barre de recherche principale (mainSearch) permet à l'utilisateur d'entrer des mots-clés. 
+La méthode filterRecipes utilise ces mots pour filtrer les recettes en vérifiant la correspondance avec le nom, la description et les ingrédients de chaque recette.
+
+Filtres : L'utilisateur peut sélectionner des filtres spécifiques dans les listes déroulantes d'ingrédients, d'appareils et d'ustensiles. 
+Ces filtres sont appliqués en temps réel pour afficher uniquement les recettes qui répondent aux critères spécifiés.
+
+Affichage Dynamique : Les recettes qui correspondent aux critères de recherche et de filtrage sont affichées dynamiquement 
+à chaque modification de la recherche principale ou des filtres sélectionnés. 
+Cela offre une expérience interactive où l'utilisateur peut explorer et trouver des recettes pertinentes de manière fluide.
+
+En résumé, le principe est de permettre à l'utilisateur de rechercher des recettes en spécifiant des critères multiples, 
+avec une mise à jour en temps réel de l'affichage pour refléter les résultats correspondants.
+
+Voici un résumé des principales fonctionnalités :
+
+1. **Variables DOM :**
+   - Plusieurs variables sont déclarées pour récupérer des éléments HTML, tels que les listes d'ingrédients, d'appareils et d'ustensiles, 
+   ainsi que des sections et des icônes utilisées pour le filtrage.
+
+2. **Ensembles (Sets) :**
+   - Des ensembles (`Set()`) sont utilisés pour stocker des valeurs uniques d'ingrédients, d'appareils et d'ustensiles, 
+   ainsi que des ensembles filtrés pour stocker les valeurs correspondant aux recettes filtrées.
+
+3. **Normalisation du texte :**
+   - Une fonction `textNormalize` est définie pour normaliser la casse du texte en minuscules, 
+   facilitant ainsi la comparaison et l'élimination des doublons.
+
+4. **Extraction des valeurs uniques :**
+   - Les ensembles sont remplis en extrayant les valeurs uniques d'ingrédients, 
+   d'appareils et d'ustensiles à partir d'un tableau de recettes.
+
+5. **Filtrage des recettes :**
+   - Une fonction `filterRecipes` est mise en place pour filtrer les recettes en fonction de la recherche principale, 
+   des ingrédients sélectionnés, des appareils sélectionnés et des ustensiles sélectionnés.
+
+6. **Gestion des filtres :**
+   - Une fonction `displayFilters` est définie pour afficher les filtres actifs, 
+   avec la possibilité de les supprimer individuellement.
+
+7. **Création des listes déroulantes :**
+   - Une fonction `createDropdownList` est utilisée pour créer les menus déroulants interactifs pour les ingrédients, 
+   appareils et ustensiles.
+
+8. **Filtrage des éléments de liste dans les menus déroulants :**
+   - Une fonction `filterDropdownLists` est mise en place pour filtrer les éléments de liste dans les menus déroulants en fonction des recettes filtrées.
+
+9. **Écoute d'événements :**
+   - Plusieurs écouteurs d'événements sont configurés pour réagir aux interactions de l'utilisateur, 
+   tels que la saisie de texte, le clic sur les filtres, et la fermeture des menus déroulants.
+
+Le script vise à offrir une expérience utilisateur interactive pour explorer des recettes en fonction de divers critères. 
+La mise en œuvre est basée sur l'utilisation de méthodes telles que `filter`, `map`, et `every` pour manipuler les données et les éléments du DOM.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Les Petits Plats</title>
+  </head>
+  <body>
+
+    <header>
+      <div>
+        <div id="hero">
+          <img src="assets/logo.png" class="logo" alt="Les Petits Plats Logo">
+          <div class="title-search">
+            <h1>Cherchez parmi plus de 1500 recettes du quotidien, simples et délicieuses</h1>
+              <div class="search">
+                <input type="text" class="main-search" placeholder="Rechercher une recette, un ingrédient...">
+                <i class="fa-solid fa-xmark clear-search"></i>
+                <button type="submit" class="search-button">
+                  <img src="assets/search.png" alt="Loupe Recherche" class="search-image">
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">      
+      <div class="main-section">
+        <div class="container-main-top">
+          <section class="filter-section">
+            <div class="ingredient-list"></div>
+            <div class="appliance-list"></div>
+            <div class="utensil-list"></div>
+          </section>
+        <div class="recipe-count"></div>
+      </div>
+
+      <div class="filters-added">
+        <div class="filter-container"></div>
+      </div>
+        
+      <div class="recipes-section"></div>
+        <p class="no-recipes-message"></p>
+      </div>
+    </main>
+
+    <script src="data/recipes.js"></script>
+    <script src="scripts/factories/recipes.js"></script>
+    <script src="scripts/searchF.js"></script>
+    <script src="scripts/pages/index.js"></script>
+  </body>
+</html>
